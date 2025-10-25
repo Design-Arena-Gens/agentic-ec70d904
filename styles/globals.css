@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+}
+
+html, body, :root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+}
+
+.container-padding {
+  @apply px-6 md:px-10 lg:px-16;
+}
+
+.gradient-hero {
+  background: radial-gradient(60% 120% at 70% 0%, rgba(34,197,94,0.2) 0%, rgba(21,128,61,0.08) 40%, rgba(255,255,255,0) 70%),
+              linear-gradient(180deg, rgba(34,197,94,0.10) 0%, rgba(255,255,255,0) 40%);
+}
+
+/* simple fade/slide utilities */
+.fade-in {
+  @apply opacity-0 translate-y-2 animate-[fadeIn_.6s_ease-out_forwards];
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
